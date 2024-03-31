@@ -1,0 +1,2 @@
+class UnableToFindVersion(Exception):
+    pass

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sekai-app-hash-getter"
+version = "0.1.0"
+description = ""
+authors = ["Maidd <25988046+Maidd@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "sekai_app_hash_getter"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
+unitypy = "^1.10.7"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
