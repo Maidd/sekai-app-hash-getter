@@ -12,6 +12,7 @@ beautifulsoup4 = "^4.12.3"
 requests = "^2.31.0"
 unitypy = "^1.10.7"
 python-dotenv = "^1.0.1"
+cloudscraper = "^1.2.71"
 
 
 [build-system]

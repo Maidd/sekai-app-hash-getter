@@ -11,10 +11,12 @@ import shutil
 import UnityPy
 import os
 import json
+import cloudscraper
 
 
 def get_app_ver(url: str):
-    req = requests.get(
+    scraper = cloudscraper.create_scraper()
+    req = scraper.get(
         url,
         headers=DEFAULT_HEADER,
     )
@@ -30,7 +32,8 @@ def get_app_ver(url: str):
 
 
 def download(url: str, dest: Path):
-    req = requests.get(
+    scraper = cloudscraper.create_scraper()
+    req = scraper.get(
         url,
         headers=DEFAULT_HEADER,
     )
