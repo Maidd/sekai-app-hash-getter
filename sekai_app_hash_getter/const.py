@@ -1,7 +1,7 @@
 import re
 
 APKPURE_PJSEKAI_URL = "https://apkpure.com/hatsune-miku-colorful-stage/com.sega.pjsekai"
-APKPURE_PJSEKAI_DL = "https://d.apkpure.com/b/APK/com.sega.pjsekai?version=latest"
+APKPURE_PJSEKAI_DL = "https://d.apkpure.com/b/XAPK/com.sega.pjsekai?version=latest"
 SEMVER_PATTERN = re.compile(
     r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"
 )

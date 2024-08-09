@@ -77,11 +77,14 @@ def main():
     if old_version.strip() != version.strip():
         print(f"updating to {version}...")
         temp_dir = Path(mkdtemp())
-        sekai_unzipped_path = temp_dir / "sekai"
+        sekai_unzipped_path_xapk = temp_dir / "sekai_xapk"
+        sekai_unzipped_path = temp_dir / "sekai_xapk" / "sekai"
+        sekai_unzipped_path_xapk.mkdir(exist_ok=True)
         sekai_unzipped_path.mkdir(exist_ok=True)
         print(f"downloading and unzipping {version}...")
         download(APKPURE_PJSEKAI_DL, temp_dir / "sekai.zip")
-        shutil.unpack_archive(temp_dir / "sekai.zip", sekai_unzipped_path)
+        shutil.unpack_archive(temp_dir / "sekai.zip", sekai_unzipped_path_xapk)
+        shutil.unpack_archive(sekai_unzipped_path_xapk / "com.sega.pjsekai.apk", sekai_unzipped_path, format="zip")
         print(f"searching for app hash...")
         app_hash = find_app_hash(sekai_unzipped_path / "assets" / "bin" / "Data")
         if app_hash is not None:
